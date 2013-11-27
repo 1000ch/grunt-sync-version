@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
 If `version` is specified, `major`, `minor`, `patch`, `patch` options will be ignored.
 
-#### `version`
+#### version
 
 Type: `String`
 
