@@ -1,11 +1,11 @@
 module.exports = function (grunt) {
   'use strict';
 
-  grunt.registerMultiTask('jsonversion', 'Package version manager.', function() {
+  grunt.registerMultiTask('version', 'Manage version of JSON setting file with Grunt task.', function() {
 
     var options = this.options({
       major: 0,
-      minor: 1,
+      minor: 0,
       patch: 0,
       format: '{{major}}.{{minor}}.{{patch}}',
       space: 2
@@ -33,6 +33,7 @@ module.exports = function (grunt) {
   function bumpVersion(file, version, space) {
     var json = grunt.file.readJSON(file);
     json.version = version;
-    grunt.file.write(file, JSON.stringify(json, null, new Array(space + 1).join(' ')));
+    var string = JSON.stringify(json, null, new Array(space + 1).join(' '));
+    grunt.file.write(file, string);
   }
 };
