@@ -1,0 +1,21 @@
+{
+  "name": "grunt-json-version",
+  "version": "0.1.0",
+  "description": "Version of json file manager.",
+  "main": "gruntfile.coffee",
+  "keywords": [
+    "version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:1000ch/grunt-json-version.git"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "author": {
+    "name": "1000ch",
+    "url": "http://1000ch.net"
+  },
+  "license": "GPL"
+}
