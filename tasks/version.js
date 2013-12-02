@@ -4,18 +4,19 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('version', 'Manage version of JSON setting file with Grunt task.', function() {
 
     var options = this.options({
-      major: 0,
-      minor: 0,
-      patch: 0,
-      format: '{{major}}.{{minor}}.{{patch}}',
+      base: 'package.json',
       space: 2
     });
 
-    if (!options.version) {
-      options.version = options.format
-        .replace('{{major}}', options.major)
-        .replace('{{minor}}', options.minor)
-        .replace('{{patch}}', options.patch);
+    if (!grunt.file.isFile(options.base)) {
+      grunt.log.error(options.base + ' is not found.');
+      return false;
+    }
+
+    var baseJSON = grunt.file.readJSON(options.base);
+    if (baseJSON.version === undefined) {
+      grunt.log.error('"version" of base file is undefined.');
+      return false;
     }
 
     this.filesSrc.filter(function(file) {
@@ -26,11 +27,11 @@ module.exports = function (grunt) {
         return false;
       }
     }).forEach(function(file) {
-      bumpVersion(file, options.version, options.space);
+      syncVersion(file, baseJSON.version, options.space);
     });
   });
 
-  function bumpVersion(file, version, space) {
+  function syncVersion(file, version, space) {
     var json = grunt.file.readJSON(file);
     json.version = version;
     var string = JSON.stringify(json, null, new Array(space + 1).join(' '));

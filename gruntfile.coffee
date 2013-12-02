@@ -4,11 +4,8 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON 'package.json'
     version:
       options:
-        major: 0
-        minor: 1
-        patch: 1
-        format: '{{major}}.{{minor}}.{{patch}}'
-      files: 'package.json'
+        base: 'package.json'
+      files: ['sample.json']
 
   grunt.loadTasks 'tasks'
 

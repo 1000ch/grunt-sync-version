@@ -1,6 +1,6 @@
 {
   "name": "grunt-json-version",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Manage version of JSON setting file with Grunt task.",
   "main": "gruntfile.coffee",
   "keywords": [
@@ -21,5 +21,8 @@
     "name": "1000ch",
     "url": "http://1000ch.net"
   },
-  "license": "GPL v3"
+  "license": "GPL v3",
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
 }
