@@ -2,7 +2,7 @@
 
 ## About
 
-Manage version of JSON setting file with Grunt task.
+Synchronize version of JSON setting file with Grunt task.
 
 ## Usage
 
