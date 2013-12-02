@@ -12,10 +12,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     version: {
       options: {
-        major: 0,
-        minor: 1,
-        patch: 1,
-        format: '{{major}}.{{minor}}.{{patch}}'
+        base: 'base.json'
       },
       files: ['package.json']
     }
@@ -28,30 +25,20 @@ module.exports = function (grunt) {
   grunt.registerTask('default', 'version');
 };
 ```
+### files
+
+Type `String` or `Array`
+
+Specify targets to apply version.
 
 ### Options
 
-If `version` is specified, `major`, `minor`, `patch`, `patch` options will be ignored.
-
-#### version
+#### base
 
 Type: `String`
 
-#### major
-
-Type: `Number`
-
-#### minor
-
-Type: `Number`
-
-#### patch
-
-Type: `Number`
-
-#### format
-
-Type: `String`
+Base json file. This is optional.  
+If `base` is omitted, `package.json` will be loaded.
 
 #### space
 
