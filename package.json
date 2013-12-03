@@ -1,11 +1,13 @@
 {
   "name": "grunt-sync-version",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Synchronize version of JSON setting files with Grunt task.",
   "main": "gruntfile.coffee",
   "keywords": [
     "json",
-    "version"
+    "version",
+    "grunt",
+    "gruntplugin"
   ],
   "repository": {
     "type": "git",
