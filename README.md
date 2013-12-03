@@ -1,4 +1,4 @@
-# grunt-json-version
+# grunt-sync-version
 
 ## About
 
