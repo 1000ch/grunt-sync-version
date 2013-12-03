@@ -1,7 +1,7 @@
 {
-  "name": "grunt-json-version",
+  "name": "grunt-sync-version",
   "version": "0.2.0",
-  "description": "Manage version of JSON setting file with Grunt task.",
+  "description": "Synchronize version of JSON setting files with Grunt task.",
   "main": "gruntfile.coffee",
   "keywords": [
     "json",
@@ -9,10 +9,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:1000ch/grunt-json-version.git"
+    "url": "git@github.com:1000ch/grunt-sync-version.git"
   },
   "bugs": {
-    "url": "https://github.com/1000ch/grunt-json-version/issues"
+    "url": "https://github.com/1000ch/grunt-sync-version/issues"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"

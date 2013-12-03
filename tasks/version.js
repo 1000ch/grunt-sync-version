@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   'use strict';
 
-  grunt.registerMultiTask('version', 'Manage version of JSON setting file with Grunt task.', function() {
+  grunt.registerMultiTask('version', 'Synchronize version of JSON setting files with Grunt task.', function() {
 
     var options = this.options({
       base: 'package.json',

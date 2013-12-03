@@ -2,7 +2,7 @@
 
 ## About
 
-Synchronize version of JSON setting file with Grunt task.
+Synchronize version of JSON setting files with Grunt task.
 
 ## Usage
 
@@ -18,8 +18,8 @@ module.exports = function (grunt) {
     }
   });
 
-  // load grunt-json-version
-  grunt.loadNpmTasks('grunt-json-version');
+  // load grunt-sync-version
+  grunt.loadNpmTasks('grunt-sync-version');
 
   // register task
   grunt.registerTask('default', 'version');
@@ -37,7 +37,7 @@ Specify targets to apply version.
 
 Type: `String`
 
-Base json file. This is optional.  
+Base json file. **This is optional.**  
 If `base` is omitted, `package.json` will be loaded.
 
 #### space
