@@ -4,6 +4,8 @@
 
 Synchronize version of JSON setting files with Grunt task.
 
+[![NPM](https://nodei.co/npm/grunt-sync-version.png)](https://nodei.co/npm/grunt-sync-version/)
+
 ## Usage
 
 ```js
